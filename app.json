@@ -24,7 +24,7 @@
         },
         "MONGODB_URI": {
             "description": "MongoDB URI for Saving Chat Settings. Video Tutorial Here: https://www.youtube.com/watch?v=aXlF80Cn7iU"
-            "required": false
+
         },
         "BOT_OWNER": {
             "description": "Your Telegram User ID for using Admin commands."
