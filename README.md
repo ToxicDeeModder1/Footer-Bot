@@ -7,11 +7,11 @@ A Telegram Bot for adding Footer caption beside main caption of Telegram Channel
 
 
 ### Heroku Deploy:
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/AbirHasan2005/Footer-Bot)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/ToxicDeeModder1/Footer-Bot)
 
 ### Host Locally:
 ```shell
-git clone https://github.com/AbirHasan2005/Footer-Bot
+git clone https://github.com/ToxicDeeModder1/Footer-Bot
 cd Footer-Bot
 pip3 install -r requirements.txt
 # Setup Configurations in configs.py file!
