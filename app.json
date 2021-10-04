@@ -10,8 +10,8 @@
         "bot"
     ],
     "repository": "https://github.com/ToxicDeeModder1/Footer-Bot",
-    "website": "https://telegram.dog/NarutoxxRobot",
-    "success_url": "https://t.me/NarutoxxRobot",
+    "website": "https://telegram.dog/AbirHassan2005",
+    "success_url": "https://t.me/NarutoFooterBot",
     "env": {
         "API_ID": {
             "description": "Get this value from my.telegram.org or @TeleORG_Bot"
