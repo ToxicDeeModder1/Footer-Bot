@@ -34,7 +34,7 @@ async def _start(bot: Client, m: Message):
             Config.START_TEXT,
             reply_markup=InlineKeyboardMarkup(
                 [
-                    [InlineKeyboardButton("Support Group", url="https://t.me/TheBotsWorldChannel"), InlineKeyboardButton("Bots Channel", url="https://t.me/Discovery_Updates")],
+                    [InlineKeyboardButton("Support Group", url="https://t.me/TheBotsWorldChat"), InlineKeyboardButton("Bots Channel", url="https://t.me/TheBotsWorldChannel")],
                     [InlineKeyboardButton("Developer - @ToxicDeeModderr", url="https://t.me/ToxicDeeModderr")]
                 ]
             ),
@@ -196,7 +196,7 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
                     _I, _err = await FetchMeOnChat(bot, chat_id=event_.forward_from_chat.id)
                     if _I == 404:
                         await cb.message.edit(f"Unable to Edit Message in {str(event_.forward_from_chat.id)} !\nError: {_err}")
-                        return
+                        returnables
                     if _I and (_I.can_edit_messages is True):
                         if await db.find_user_id(channel_id=event_.forward_from_chat.id) is None:
                             try:
@@ -205,7 +205,7 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
                                     await db.set_channel_id(cb.from_user.id, channel_id=event_.forward_from_chat.id)
                                     await cb.message.edit("Successfully Added Channel to Database!", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Go To Settings", callback_data="showSettings")]]))
                                 else:
-                                    await cb.message.edit("Sorry Unkil,\nYou don't have rights to Edit Messages on this Channel!")
+                                    await cb.message.edit("Sorry Unkil,\nYou don't have rights to Edit Messages on this Channel!\n\nJoin Our Channel @TheBotsWorldChannel")
                             except:
                                 await cb.message.edit("Sorry Unkil,\nYou are not Admin in this channel!")
                         else:
@@ -217,7 +217,7 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
                 except Exception as err:
                     await cb.message.edit(f"Unable to Find Channel!\n\n**Error:** `{err}`", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Support Group", url="https://t.me/DevsZone")]]))
             elif event_.text and (event_.text == "/cancel"):
-                await cb.message.edit("Process Cancelled!")
+                await cb.message.edit("*✋Thanks For Using My Bot!*")
         except TimeoutError:
             await cb.message.edit("Unkil,\n5 Minutes Passed!\nNow Trigger Again From /settings 😐")
 
